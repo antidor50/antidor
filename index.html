@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual Antidor | Desbloqueie Suas Articulações. Recupere Sua Liberdade.</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-background": "#191c1d",
+          "on-primary-fixed-variant": "#004e59",
+          "tertiary-container": "#7e4924",
+          "surface-container-low": "#f2f4f4",
+          "surface": "#f8fafa",
+          "on-error": "#ffffff",
+          "surface-container-high": "#e6e8e8",
+          "on-surface": "#191c1d",
+          "secondary-fixed-dim": "#b4cad6",
+          "on-tertiary-fixed": "#311300",
+          "secondary": "#4c616c",
+          "on-error-container": "#93000a",
+          "surface-variant": "#e1e3e3",
+          "error": "#ba1a1a",
+          "surface-dim": "#d8dada",
+          "inverse-on-surface": "#eff1f1",
+          "inverse-primary": "#90d1df",
+          "tertiary-fixed-dim": "#ffb688",
+          "on-primary": "#ffffff",
+          "on-primary-fixed": "#001f25",
+          "on-surface-variant": "#3f4949",
+          "outline-variant": "#bec8c9",
+          "tertiary-fixed": "#ffdbc7",
+          "surface-container": "#eceeee",
+          "tertiary": "#62330f",
+          "on-tertiary": "#ffffff",
+          "primary-fixed-dim": "#90d1df",
+          "secondary-container": "#cfe6f2",
+          "surface-tint": "#206773",
+          "on-tertiary-container": "#ffbe95",
+          "on-secondary": "#ffffff",
+          "inverse-surface": "#2e3131",
+          "on-secondary-container": "#526772",
+          "primary": "#004650",
+          "on-tertiary-fixed-variant": "#6b3a16",
+          "secondary-fixed": "#cfe6f2",
+          "error-container": "#ffdad6",
+          "surface-container-highest": "#e1e3e3",
+          "outline": "#6f7979",
+          "surface-bright": "#f8fafa",
+          "on-secondary-fixed-variant": "#354a53",
+          "on-primary-container": "#95d6e4",
+          "primary-container": "#135f6b",
+          "primary-fixed": "#acedfb",
+          "on-secondary-fixed": "#071e27",
+          "background": "#f8fafa",
+          "surface-container-lowest": "#ffffff"
+        },
+        fontFamily: {
+          headline: ["Newsreader", "serif"],
+          body: ["Inter", "sans-serif"],
+          label: ["Inter", "sans-serif"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  html { scroll-behavior: smooth; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .55; }
+  }
+  @keyframes ticker {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .fade-in-up  { animation: fadeInUp 0.8s ease both; }
+  .delay-1 { animation-delay: 0.15s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.45s; }
+  .delay-4 { animation-delay: 0.6s; }
+  .pulse-slow  { animation: pulse-slow 2.4s ease-in-out infinite; }
+  .ticker-wrap { overflow: hidden; white-space: nowrap; }
+  .ticker-inner { display: inline-flex; animation: ticker 28s linear infinite; }
+
+  .sticky-nav {
+    background: rgba(248,250,250,0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .grain-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+  .cta-glow {
+    box-shadow: 0 0 48px rgba(255,219,199,0.28), 0 8px 32px rgba(0,0,0,0.28);
+    transition: all 0.2s ease;
+  }
+  .cta-glow:hover {
+    box-shadow: 0 0 70px rgba(255,219,199,0.45), 0 14px 44px rgba(0,0,0,0.38);
+    transform: scale(1.03);
+  }
+  .cta-glow:active { transform: scale(0.97); }
+
+  .cta-primary {
+    background: #004650;
+    color: #fff;
+    transition: all 0.2s ease;
+  }
+  .cta-primary:hover { opacity: 0.86; transform: scale(1.02); }
+  .cta-primary:active { transform: scale(0.97); }
+
+  .symptom-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #f2f4f4;
+    border: 1px solid #bec8c9;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #3f4949;
+    transition: background 0.15s;
+  }
+  .symptom-pill:hover { background: #e6e8e8; }
+
+  .module-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.25rem 1.5rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border-left: 4px solid #004650;
+  }
+
+  .danger-border { border-left: 3px solid #ba1a1a; padding-left: 1.25rem; }
+
+  .price-strike {
+    text-decoration: line-through;
+    color: #6f7979;
+  }
+  .badge-urgency {
+    background: linear-gradient(135deg, #ba1a1a 0%, #93000a 100%);
+    color: #fff;
+  }
+
+  .guarantee-card {
+    background: linear-gradient(135deg, #f2f4f4 0%, #fff 100%);
+    border: 1.5px solid #bec8c9;
+    border-radius: 1.5rem;
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+
+<!-- ══════════ NAV ══════════ -->
+<nav class="sticky top-0 w-full z-50 sticky-nav shadow-[0_2px_20px_rgba(0,0,0,0.05)]">
+  <div class="max-w-screen-xl mx-auto flex items-center justify-between px-6 md:px-16 py-4">
+    <span class="font-headline italic text-xl md:text-2xl font-bold text-primary">Manual Antidor</span>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-on-surface-variant">
+      <a href="#diagnostico" class="hover:text-primary transition-colors">Diagnóstico</a>
+      <a href="#produto" class="hover:text-primary transition-colors">O Que Tem Dentro</a>
+      <a href="#depoimentos" class="hover:text-primary transition-colors">Depoimentos</a>
+      <a href="#oferta" class="hover:text-primary transition-colors">Oferta</a>
+    </div>
+    <a href="#oferta" class="cta-primary px-5 py-2.5 rounded-lg text-sm font-bold shadow-sm">
+      Quero Começar →
+    </a>
+  </div>
+</nav>
+
+<!-- ══════════ TICKER ══════════ -->
+<div class="bg-primary text-on-primary py-2.5 text-xs font-semibold tracking-widest uppercase overflow-hidden">
+  <div class="ticker-wrap">
+    <div class="ticker-inner gap-16">
+      <span class="px-8">✦ Mais de 12.400 pessoas já testaram este método</span>
+      <span class="px-8">✦ Acesso imediato após o pagamento</span>
+      <span class="px-8">✦ Garantia incondicional de 7 dias</span>
+      <span class="px-8">✦ Sem academia · Sem remédios · Sem exercícios pesados</span>
+      <span class="px-8">✦ Mais de 12.400 pessoas já testaram este método</span>
+      <span class="px-8">✦ Acesso imediato após o pagamento</span>
+      <span class="px-8">✦ Garantia incondicional de 7 dias</span>
+      <span class="px-8">✦ Sem academia · Sem remédios · Sem exercícios pesados</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="relative overflow-hidden pt-24 pb-32 px-6 md:px-8 bg-surface">
+  <div class="absolute -top-24 -right-24 w-[500px] h-[500px] bg-tertiary-fixed opacity-20 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-16 -left-16 w-80 h-80 bg-primary-fixed opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <span class="fade-in-up inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-secondary-container text-primary font-label text-xs font-bold tracking-widest uppercase">
+      <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">spa</span>
+      Método Natural Para Articulações
+    </span>
+
+    <h1 class="fade-in-up delay-1 font-headline text-4xl md:text-6xl font-bold leading-[1.1] text-on-surface mb-6">
+      Descubra o Método Natural Que Desbloqueia Articulações Rígidas e
+      <span class="italic text-primary block mt-2">Reduz Dores Persistentes em Poucos Minutos Por Dia</span>
+    </h1>
+
+    <p class="fade-in-up delay-2 text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-3xl mx-auto mb-4">
+      Criado especialmente para pessoas acima de 50 anos que querem recuperar mobilidade
+      <strong class="text-on-surface">sem depender de remédios, médicos ou exercícios pesados.</strong>
+    </p>
+
+    <p class="fade-in-up delay-3 text-sm text-on-surface-variant mb-12">
+      ✦ Mais de 12.400 pessoas já testaram este método nas últimas semanas.
+    </p>
+
+    <div class="fade-in-up delay-4 flex flex-col items-center gap-3">
+      <a href="#oferta" class="cta-primary inline-block px-10 py-5 rounded-xl text-lg md:text-xl font-bold shadow-lg">
+        👉 Quero Desbloquear Minhas Articulações Agora
+      </a>
+      <p class="text-sm text-on-surface-variant">Acesso imediato · Garantia de 7 dias · Funciona no celular</p>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ VSL ══════════ -->
+<section class="bg-surface-container-low py-20 px-6 md:px-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-10">
+      <p class="font-label text-xs font-bold tracking-widest uppercase text-primary mb-4">Assista antes de sair desta página</p>
+      <h2 class="font-headline text-3xl md:text-4xl font-bold text-on-surface leading-tight mb-3">
+        O segredo dos 7 minutos:
+      </h2>
+      <p class="font-headline text-xl md:text-2xl italic text-on-surface-variant leading-snug max-w-2xl mx-auto">
+        o método natural que reduz dores articulares sem remédios e sem exercícios pesados
+      </p>
+    </div>
+
+    <!-- VSL Player — VTurb -->
+    <div class="rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.2)] mb-6" style="position:relative;">
+      <vturb-smartplayer id="vid-69d72ecf12694ec90e04b8c8" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
+      <script type="text/javascript">
+        var s=document.createElement("script");
+        s.src="https://scripts.converteai.net/c7311a87-80e7-4b9f-8176-9239a8236430/players/69d72ecf12694ec90e04b8c8/v4/player.js";
+        s.async=!0;
+        document.head.appendChild(s);
+      </script>
+    </div>
+
+    <div class="text-center">
+      <a href="#oferta" class="cta-primary inline-block px-8 py-4 rounded-xl text-base font-bold shadow">
+        👉 Quero Começar Agora
+      </a>
+      <p class="text-sm text-on-surface-variant mt-3">Acesso imediato · Garantia de 7 dias</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEÇÃO 2 — DIAGNÓSTICO INVISÍVEL ══════════ -->
+<section id="diagnostico" class="py-20 px-6 md:px-8 bg-surface-container-low">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="text-center mb-12">
+      <h2 class="font-headline text-3xl md:text-5xl font-bold text-on-surface leading-tight mb-4">
+        Se Você Tem Mais de 50 Anos, Isso Não É Normal. É Um Sinal de Alerta.
+      </h2>
+      <p class="text-on-surface-variant text-lg">Você sente algum desses sintomas?</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-14">
+      <span class="symptom-pill"><span class="material-symbols-outlined text-base text-error" style="font-variation-settings:'FILL' 1;">warning</span> Travamentos ao acordar</span>
+      <span class="symptom-pill"><span class="material-symbols-outlined text-base text-error" style="font-variation-settings:'FILL' 1;">warning</span> Dores ao caminhar</span>
+      <span class="symptom-pill"><span class="material-symbols-outlined text-base text-error" style="font-variation-settings:'FILL' 1;">warning</span> Joelhos estalando</span>
+      <span class="symptom-pill"><span class="material-symbols-outlined text-base text-error" style="font-variation-settings:'FILL' 1;">warning</span> Ombros duros</span>
+      <span class="symptom-pill"><span class="material-symbols-outlined text-base text-error" style="font-variation-settings:'FILL' 1;">warning</span> Dificuldade para se abaixar</span>
+      <span class="symptom-pill"><span class="material-symbols-outlined text-base text-error" style="font-variation-settings:'FILL' 1;">warning</span> Cansaço nas costas</span>
+      <span class="symptom-pill"><span class="material-symbols-outlined text-base text-error" style="font-variation-settings:'FILL' 1;">warning</span> Rigidez que vai e volta</span>
+      <span class="symptom-pill"><span class="material-symbols-outlined text-base text-error" style="font-variation-settings:'FILL' 1;">warning</span> Dor que piora no fim do dia</span>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-2xl p-8 md:p-12 shadow-sm max-w-3xl mx-auto text-center">
+      <span class="material-symbols-outlined text-5xl text-primary mb-4" style="font-variation-settings:'FILL' 1;">lock_open</span>
+      <h3 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mb-4">
+        Esses são sinais de algo chamado <em class="italic text-primary">microtravamentos articulares.</em>
+      </h3>
+      <p class="text-on-surface-variant text-lg leading-relaxed mb-4">
+        São pequenos bloqueios que deixam suas articulações rígidas… E <strong class="text-on-surface">rigidez = dor.</strong>
+      </p>
+      <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+        A boa notícia? Isso pode ser desbloqueado em <strong class="text-on-surface">poucos minutos por dia.</strong>
+      </p>
+      <a href="#oferta" class="cta-primary inline-block px-8 py-4 rounded-xl text-base font-bold shadow">
+        👉 Quero Aprender o Método de Desbloqueio
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEÇÃO 3 — BIG IDEA ══════════ -->
+<section class="py-24 px-6 md:px-8 bg-surface">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-14">
+      <h2 class="font-headline text-3xl md:text-5xl font-bold text-on-surface leading-tight">
+        A dor não começa na articulação. <em class="italic text-primary">Ela começa na rigidez.</em>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="flex items-start gap-4 p-6 bg-error-container/30 rounded-2xl">
+        <span class="material-symbols-outlined text-error text-3xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">trending_down</span>
+        <div>
+          <p class="font-semibold text-on-surface mb-1">Quando as articulações travam:</p>
+          <ul class="text-on-surface-variant text-sm space-y-1 mt-2">
+            <li>→ A circulação piora</li>
+            <li>→ Músculos ficam tensos</li>
+            <li>→ A dor aparece</li>
+            <li>→ A inflamação aumenta</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 p-6 bg-primary/5 rounded-2xl border border-primary/20">
+        <span class="material-symbols-outlined text-primary text-3xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">trending_up</span>
+        <div>
+          <p class="font-semibold text-on-surface mb-1">Quando você desbloqueia:</p>
+          <ul class="text-on-surface-variant text-sm space-y-1 mt-2">
+            <li>✓ Circulação melhora</li>
+            <li>✓ Músculos relaxam</li>
+            <li>✓ Dor reduz naturalmente</li>
+            <li>✓ Leveza retorna</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="border-l-4 border-primary bg-surface-container-low px-8 py-6 rounded-r-2xl font-headline italic text-xl text-on-surface leading-relaxed mb-10">
+      "Quando você desbloqueia essa rigidez, o corpo reduz a dor naturalmente. Não é magia. É o seu próprio corpo fazendo o que sempre soube fazer."
+    </blockquote>
+
+    <div class="text-center">
+      <a href="#oferta" class="cta-primary inline-block px-8 py-4 rounded-xl text-base font-bold shadow">
+        👉 Quero Aprender o Método de Desbloqueio
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEÇÃO 4 — AUTORIDADE ══════════ -->
+<section class="py-20 px-6 md:px-8 bg-on-background text-white grain-overlay relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-on-background/60 pointer-events-none"></div>
+  <div class="max-w-4xl mx-auto relative z-10">
+    <div class="text-center mb-12">
+      <h2 class="font-headline text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
+        Método criado após analisar mais de <em class="italic text-primary-fixed">1.200 casos</em> de dor crônica em pessoas 50+
+      </h2>
+      <p class="text-surface-dim text-xl leading-relaxed max-w-2xl mx-auto">
+        Descobrimos padrões que <strong class="text-white">99% das pessoas com dor</strong> têm em comum: rigidez acumulada + movimentos errados do dia a dia.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div class="bg-white/8 backdrop-blur border border-white/15 p-8 rounded-2xl">
+        <p class="font-headline text-4xl font-bold text-primary-fixed mb-2">1.200+</p>
+        <p class="text-surface-dim text-sm">casos analisados de dor crônica</p>
+      </div>
+      <div class="bg-white/8 backdrop-blur border border-white/15 p-8 rounded-2xl">
+        <p class="font-headline text-4xl font-bold text-primary-fixed mb-2">99%</p>
+        <p class="text-surface-dim text-sm">dos casos têm rigidez como causa raiz</p>
+      </div>
+      <div class="bg-white/8 backdrop-blur border border-white/15 p-8 rounded-2xl">
+        <p class="font-headline text-4xl font-bold text-primary-fixed mb-2">12.400+</p>
+        <p class="text-surface-dim text-sm">pessoas já aplicaram o método</p>
+      </div>
+    </div>
+
+    <p class="text-center text-surface-dim text-sm mt-8">
+      Quando corrigimos rigidez + movimentos → a dor cai.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ SEÇÃO 5 — PRODUTO ══════════ -->
+<section id="produto" class="py-24 px-6 md:px-8 bg-surface-container-low">
+  <div class="max-w-4xl mx-auto text-center">
+    <span class="font-label text-xs font-bold tracking-widest uppercase text-primary mb-4 block"></span>
+    <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">
+      Apresentando o <em class="italic text-primary">Manual Antidor</em>
+    </h2>
+    <p class="text-on-surface-variant text-xl leading-relaxed max-w-2xl mx-auto mb-12">
+      O manual mais completo do Brasil para quem quer:
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-left mb-12">
+      <div class="flex items-center gap-3 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings:'FILL' 1;">directions_walk</span>
+        <span class="font-medium text-on-surface">Aumentar mobilidade</span>
+      </div>
+      <div class="flex items-center gap-3 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings:'FILL' 1;">healing</span>
+        <span class="font-medium text-on-surface">Reduzir dores</span>
+      </div>
+      <div class="flex items-center gap-3 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings:'FILL' 1;">lock_open</span>
+        <span class="font-medium text-on-surface">Destravar articulações</span>
+      </div>
+      <div class="flex items-center gap-3 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings:'FILL' 1;">favorite</span>
+        <span class="font-medium text-on-surface">Melhorar circulação</span>
+      </div>
+      <div class="flex items-center gap-3 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings:'FILL' 1;">self_improvement</span>
+        <span class="font-medium text-on-surface">Ganhar leveza para caminhar</span>
+      </div>
+      <div class="flex items-center gap-3 bg-surface-container-lowest p-5 rounded-xl shadow-sm">
+        <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings:'FILL' 1;">medication_liquid</span>
+        <span class="font-medium text-on-surface">Parar de depender de remédios</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEÇÃO 6 — O QUE TEM DENTRO ══════════ -->
+<section class="py-24 bg-surface overflow-hidden">
+  <div class="max-w-5xl mx-auto px-6 md:px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">
+        📚 Tudo o que você recebe dentro do Manual Antidor
+      </h2>
+      <p class="text-on-surface-variant text-lg">Valor total muito acima do preço de acesso.</p>
+    </div>
+  </div>
+
+  <!-- Esteira de módulos — linha 1 (esquerda para direita) -->
+  <div class="conveyor-mask mb-5">
+    <div class="conveyor-track conveyor-fwd">
+
+      <!-- Módulos duplicados para loop infinito -->
+      <div class="module-chip">
+        <div class="chip-num">01</div>
+        <div>
+          <p class="chip-title">Método de Desbloqueio Articular <span style="color:#004650;">(Exclusivo)</span></p>
+          <p class="chip-desc">Passo a passo para aplicar no mesmo dia.</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">02</div>
+        <div>
+          <p class="chip-title">50 Exercícios Ilustrados Anti-Rigidez</p>
+          <p class="chip-desc">Fáceis, seguros e pensados para 50+.</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">03</div>
+        <div>
+          <p class="chip-title">Mapa do Corpo (Região → Exercício Exato)</p>
+          <p class="chip-desc">Joelho · lombar · pescoço · ombro · quadril · mãos · pés</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">04</div>
+        <div>
+          <p class="chip-title">Guia de Nutrição Anti-Inflamatória</p>
+          <p class="chip-desc">Alimentos que reduzem dor + os que pioram.</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">05</div>
+        <div>
+          <p class="chip-title">Manual de Ergonomia</p>
+          <p class="chip-desc">Sentar, dormir, caminhar e levantar sem piorar a dor.</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">06</div>
+        <div>
+          <p class="chip-title">Guia do Sono</p>
+          <p class="chip-desc">Técnicas que reduzem rigidez matinal.</p>
+        </div>
+      </div>
+      <!-- duplicata para loop -->
+      <div class="module-chip">
+        <div class="chip-num">01</div>
+        <div>
+          <p class="chip-title">Método de Desbloqueio Articular <span style="color:#004650;">(Exclusivo)</span></p>
+          <p class="chip-desc">Passo a passo para aplicar no mesmo dia.</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">02</div>
+        <div>
+          <p class="chip-title">50 Exercícios Ilustrados Anti-Rigidez</p>
+          <p class="chip-desc">Fáceis, seguros e pensados para 50+.</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">03</div>
+        <div>
+          <p class="chip-title">Mapa do Corpo (Região → Exercício Exato)</p>
+          <p class="chip-desc">Joelho · lombar · pescoço · ombro · quadril · mãos · pés</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">04</div>
+        <div>
+          <p class="chip-title">Guia de Nutrição Anti-Inflamatória</p>
+          <p class="chip-desc">Alimentos que reduzem dor + os que pioram.</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">05</div>
+        <div>
+          <p class="chip-title">Manual de Ergonomia</p>
+          <p class="chip-desc">Sentar, dormir, caminhar e levantar sem piorar a dor.</p>
+        </div>
+      </div>
+      <div class="module-chip">
+        <div class="chip-num">06</div>
+        <div>
+          <p class="chip-title">Guia do Sono</p>
+          <p class="chip-desc">Técnicas que reduzem rigidez matinal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Esteira de módulos — linha 2 (direita para esquerda) -->
+  <div class="conveyor-mask">
+    <div class="conveyor-track conveyor-rev">
+
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">07</div>
+        <div>
+          <p class="chip-title">Primeiros Socorros para Dor Aguda</p>
+          <p class="chip-desc">Como agir quando a dor ataca de repente.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">08</div>
+        <div>
+          <p class="chip-title">Diário de Progresso 30 Dias</p>
+          <p class="chip-desc">Acompanhe sua evolução dia a dia.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">09</div>
+        <div>
+          <p class="chip-title">Contraindicações e Segurança</p>
+          <p class="chip-desc">Quando fazer, quando não fazer, sinais de alerta.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">10</div>
+        <div>
+          <p class="chip-title">FAQ Completo (15 Perguntas)</p>
+          <p class="chip-desc">Tudo respondido de forma simples.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">11</div>
+        <div>
+          <p class="chip-title">Glossário Simplificado</p>
+          <p class="chip-desc">Nada de termos médicos difíceis.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt" style="border-left-color:#62330f;">
+        <div class="chip-num" style="background:#62330f;">12</div>
+        <div>
+          <p class="chip-title">Seção de Motivação 🎯</p>
+          <p class="chip-desc">Técnicas mentais e frases para manter constância.</p>
+        </div>
+      </div>
+      <!-- duplicata -->
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">07</div>
+        <div>
+          <p class="chip-title">Primeiros Socorros para Dor Aguda</p>
+          <p class="chip-desc">Como agir quando a dor ataca de repente.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">08</div>
+        <div>
+          <p class="chip-title">Diário de Progresso 30 Dias</p>
+          <p class="chip-desc">Acompanhe sua evolução dia a dia.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">09</div>
+        <div>
+          <p class="chip-title">Contraindicações e Segurança</p>
+          <p class="chip-desc">Quando fazer, quando não fazer, sinais de alerta.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">10</div>
+        <div>
+          <p class="chip-title">FAQ Completo (15 Perguntas)</p>
+          <p class="chip-desc">Tudo respondido de forma simples.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt">
+        <div class="chip-num chip-num-alt">11</div>
+        <div>
+          <p class="chip-title">Glossário Simplificado</p>
+          <p class="chip-desc">Nada de termos médicos difíceis.</p>
+        </div>
+      </div>
+      <div class="module-chip chip-alt" style="border-left-color:#62330f;">
+        <div class="chip-num" style="background:#62330f;">12</div>
+        <div>
+          <p class="chip-title">Seção de Motivação 🎯</p>
+          <p class="chip-desc">Técnicas mentais e frases para manter constância.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-8">
+    <div class="text-center mt-14">
+      <p class="font-headline text-3xl md:text-4xl font-bold text-primary mb-2">Tudo isso por um preço simbólico.</p>
+      <p class="text-on-surface-variant text-lg">Menos do que uma caixa de anti-inflamatório. Acesso imediato. Para sempre.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ── Esteira / Conveyor ───────────────────────────────────── */
+  @keyframes conveyorFwd {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes conveyorRev {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .conveyor-mask {
+    overflow: hidden;
+    /* fade nas bordas */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+
+  .conveyor-track {
+    display: inline-flex;
+    gap: 1rem;
+    padding: 0.5rem 0.5rem;
+    white-space: nowrap;
+  }
+
+  .conveyor-fwd {
+    animation: conveyorFwd 36s linear infinite;
+  }
+  .conveyor-rev {
+    animation: conveyorRev 36s linear infinite;
+  }
+
+  /* Pausa no hover */
+  .conveyor-mask:hover .conveyor-fwd,
+  .conveyor-mask:hover .conveyor-rev {
+    animation-play-state: paused;
+  }
+
+  /* ── Cartão de módulo ─────────────────────────────────────── */
+  .module-chip {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1rem 1.25rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    border-left: 4px solid #004650;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    min-width: 260px;
+    max-width: 310px;
+    white-space: normal;
+    flex-shrink: 0;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: default;
+  }
+  .module-chip:hover {
+    box-shadow: 0 6px 28px rgba(0,70,80,0.14);
+    transform: translateY(-2px);
+  }
+
+  .chip-alt {
+    background: #f2f4f4;
+    border-left-color: #004650;
+  }
+
+  .chip-num {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: #004650;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    font-family: Inter, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .chip-num-alt {
+    background: #004650;
+  }
+
+  .chip-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #191c1d;
+    margin-bottom: 0.2rem;
+    font-family: Inter, sans-serif;
+    line-height: 1.35;
+  }
+  .chip-desc {
+    font-size: 0.8rem;
+    color: #3f4949;
+    font-family: Inter, sans-serif;
+    line-height: 1.4;
+  }
+</style>
+
+<!-- ══════════ SEÇÃO 7 — PROVA SOCIAL ══════════ -->
+<section id="depoimentos" style="background:#F4F6FA;border-top:1px solid #E5E7EB;padding:52px 0;overflow:hidden">
+  <div style="max-width:1100px;margin:0 auto;padding:0 22px">
+    <div style="text-align:center;margin-bottom:24px">
+      <div style="width:40px;height:3px;background:#004650;margin:0 auto 12px;border-radius:2px"></div>
+      <h2 style="font-family:'Newsreader',Georgia,serif;font-size:clamp(26px,5vw,36px);font-weight:700;color:#191c1d;margin-bottom:4px">O que estão <span style="color:#004650">falando</span></h2>
+      <p style="font-size:15px;color:#6B7280;margin-bottom:0">Resultados reais de quem já colocou em prática</p>
+    </div>
+  </div>
+
+  <!-- Carrossel automático -->
+  <div style="overflow:hidden;position:relative">
+    <div id="testimonialTrack" style="display:flex;gap:16px;padding:8px 0;animation:scrollTestimonials 32s linear infinite;width:max-content">
+
+      <!-- Card 1 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px">
+          <span style="color:#62330f">★★★★★</span>
+        </div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Eu acordava travada todos os dias. Em 3 dias senti leveza nas costas. Não acreditei no começo."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">CM</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Cláudia M.</p><p style="font-size:12px;color:#6b7280;margin:0">58 anos · SP</p></div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px">
+          <span style="color:#62330f">★★★★★</span>
+        </div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Meu joelho não travou mais nas escadas. Parece simples, mas mudou tudo no meu dia a dia."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">PR</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Paulo R.</p><p style="font-size:12px;color:#6b7280;margin:0">64 anos · MG</p></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px">
+          <span style="color:#62330f">★★★★★</span>
+        </div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Eu pensei que era idade. Não era. Era rigidez acumulada. Em 2 semanas me sinto com 10 anos a menos."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">SL</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Sandra L.</p><p style="font-size:12px;color:#6b7280;margin:0">67 anos · RJ</p></div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px">
+          <span style="color:#62330f">★★★★★</span>
+        </div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Os movimentos do manual são fáceis de fazer e ajudam muito. Faço todo dia na beira da cama."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">OB</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Odair B.</p><p style="font-size:12px;color:#6b7280;margin:0">72 anos · PR</p></div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px">
+          <span style="color:#62330f">★★★★★</span>
+        </div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Com artrose no quadril achei que não dava pra fazer nada. Esse guia me mostrou que dá. Estou muito melhor."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">MA</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Maria A.</p><p style="font-size:12px;color:#6b7280;margin:0">61 anos · GO</p></div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px">
+          <span style="color:#62330f">★★★★★</span>
+        </div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"A dor nas costas que eu tinha há anos diminuiu de forma que eu não esperava. Valeu muito cada centavo."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">RF</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Roberto F.</p><p style="font-size:12px;color:#6b7280;margin:0">55 anos · RS</p></div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px">
+          <span style="color:#62330f">★★★★★</span>
+        </div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Minha rigidez matinal era terrível. Agora consigo sair da cama sem aquele sofrimento de sempre. Recomendo."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">LN</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Lúcia N.</p><p style="font-size:12px;color:#6b7280;margin:0">69 anos · BA</p></div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px">
+          <span style="color:#62330f">★★★★★</span>
+        </div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Nunca pensei que algo tão simples fosse funcionar assim. Os exercícios são rápidos e já sinto resultado."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">JC</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">José C.</p><p style="font-size:12px;color:#6b7280;margin:0">63 anos · PE</p></div>
+        </div>
+      </div>
+
+      <!-- Repetição para loop infinito -->
+      <!-- Card 1 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px"><span style="color:#62330f">★★★★★</span></div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Eu acordava travada todos os dias. Em 3 dias senti leveza nas costas. Não acreditei no começo."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">CM</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Cláudia M.</p><p style="font-size:12px;color:#6b7280;margin:0">58 anos · SP</p></div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px"><span style="color:#62330f">★★★★★</span></div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Meu joelho não travou mais nas escadas. Parece simples, mas mudou tudo no meu dia a dia."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">PR</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Paulo R.</p><p style="font-size:12px;color:#6b7280;margin:0">64 anos · MG</p></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px"><span style="color:#62330f">★★★★★</span></div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Eu pensei que era idade. Não era. Era rigidez acumulada. Em 2 semanas me sinto com 10 anos a menos."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">SL</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Sandra L.</p><p style="font-size:12px;color:#6b7280;margin:0">67 anos · RJ</p></div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div style="background:#fff;border-radius:16px;padding:24px;width:300px;flex-shrink:0;box-shadow:0 4px 16px rgba(0,0,0,.07)">
+        <div style="display:flex;gap:3px;margin-bottom:12px"><span style="color:#62330f">★★★★★</span></div>
+        <p style="font-size:14px;color:#3f4949;line-height:1.6;margin-bottom:16px;font-style:italic">"Os movimentos do manual são fáceis de fazer e ajudam muito. Faço todo dia na beira da cama."</p>
+        <div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid #e5e7eb">
+          <div style="width:36px;height:36px;border-radius:50%;background:#cfe6f2;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#004650">OB</div>
+          <div><p style="font-weight:600;font-size:13px;color:#191c1d;margin:0">Odair B.</p><p style="font-size:12px;color:#6b7280;margin:0">72 anos · PR</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carrossel animação -->
+  <style>
+    @keyframes scrollTestimonials {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    #testimonialTrack:hover { animation-play-state: paused; }
+  </style>
+
+  <p style="text-align:center;font-size:12px;color:#9CA3AF;margin-top:16px;padding:0 22px">* Depoimentos ilustrativos. Resultados individuais podem variar.</p>
+</section>
+
+<!-- ══════════ SEÇÃO 8 — OFERTA ══════════ -->
+<section id="oferta" style="background:#0A1428;padding:72px 0;position:relative;overflow:hidden">
+  <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(0,140,255,.08) 0%,transparent 65%);pointer-events:none"></div>
+  <div style="max-width:680px;margin:0 auto;padding:0 22px;position:relative;z-index:1">
+
+    <div style="text-align:center;margin-bottom:24px">
+      <p style="font-family:'Barlow Condensed',Inter,sans-serif;font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:#00AAFF;margin-bottom:10px">Condição especial por tempo limitado</p>
+      <h2 style="font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(28px,7vw,44px);color:#EFF4FF;line-height:1.1;margin-bottom:0">Essa é a minha <span style="color:#22C55E">melhor oferta</span></h2>
+    </div>
+
+    <div style="background:linear-gradient(160deg,#0A1428 0%,#0D1830 100%);border:1px solid rgba(0,170,255,.25);border-radius:20px;padding:28px 22px;box-shadow:0 0 0 1px rgba(0,170,255,.08),0 20px 60px rgba(0,0,0,.4)">
+
+      <!-- Itens incluídos -->
+      <div style="display:flex;flex-direction:column;gap:0;margin-bottom:22px">
+
+        <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">Manual Antidor – Programa Completo de Alívio e Mobilidade</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$97</span>
+        </div>
+
+        <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">50 Exercícios Antidor com imagens e instruções claras</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$67</span>
+        </div>
+
+        <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">Mapa do Corpo – qual exercício usar para cada dor</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$47</span>
+        </div>
+
+        <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">Guia de Nutrição Anti-inflamatória</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$37</span>
+        </div>
+
+        <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">Guia de Ergonomia Antidor</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$37</span>
+        </div>
+
+        <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">Guia do Sono Antidor</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$27</span>
+        </div>
+
+        <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">Primeiros Socorros Para Dor Aguda</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$37</span>
+        </div>
+
+        <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">Diário de Progresso – 30 Dias</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$27</span>
+        </div>
+
+        <div style="padding:11px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">FAQ Antidor – 15 dúvidas respondidas</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$17</span>
+        </div>
+
+        <div style="padding:11px 0;display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="color:#22C55E;font-size:14px">✓</span>
+            <span style="font-size:14px;color:rgba(239,244,255,.9)">Seção de Motivação e Mentalidade</span>
+          </div>
+          <span style="font-size:13px;color:rgba(239,244,255,.3);text-decoration:line-through;white-space:nowrap">R$27</span>
+        </div>
+      </div>
+
+      <!-- Bônus -->
+      <div style="background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:10px;padding:14px 16px;margin-bottom:22px">
+        <p style="font-family:'Barlow Condensed',Inter,sans-serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:#22C55E;margin-bottom:10px">🎁 Bônus incluídos gratuitamente</p>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="color:#22C55E;font-size:13px">✓</span><span style="font-size:13px;color:rgba(239,244,255,.8)">BÔNUS 3 — Guia Emocional Antidor</span></div>
+            <span style="font-size:12px;color:rgba(239,244,255,.28);text-decoration:line-through;white-space:nowrap">R$47</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="color:#22C55E;font-size:13px">✓</span><span style="font-size:13px;color:rgba(239,244,255,.8)">BÔNUS 7 — Mini-Treino "Destravamento Matinal" (5 minutos)</span></div>
+            <span style="font-size:12px;color:rgba(239,244,255,.28);text-decoration:line-through;white-space:nowrap">R$37</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:1px;background:rgba(255,255,255,.08);margin-bottom:22px"></div>
+
+      <!-- Preço -->
+      <div style="text-align:center">
+        <p style="font-size:15px;color:rgba(239,244,255,.45);margin-bottom:4px">
+          De <span style="text-decoration:line-through">R$381</span> por apenas
+        </p>
+        <p style="font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(44px,11vw,72px);line-height:.9;letter-spacing:.02em;color:#22C55E;text-shadow:0 0 24px rgba(34,197,94,.35);margin-bottom:6px">
+          R$ 34,90
+        </p>
+        <p style="font-size:15px;color:rgba(239,244,255,.5);margin-bottom:18px">Acesso imediato · PDF + todas as atualizações</p>
+        <span style="display:inline-block;background:rgba(255,170,0,.15);border:1px solid rgba(255,170,0,.35);color:#FFAA00;font-family:'Barlow Condensed',Inter,sans-serif;font-size:13px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;padding:6px 20px;border-radius:20px">
+          🔥 Condição especial por tempo limitado
+        </span>
+      </div>
+
+      <!-- CTA -->
+      <a href="https://pay.kiwify.com.br/Lf3jkj6" target="_blank" style="display:block;background:#22C55E;color:#fff;font-family:'Barlow Condensed',Inter,sans-serif;font-size:22px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;padding:20px 24px;border-radius:12px;text-align:center;text-decoration:none;margin-top:24px;box-shadow:0 4px 32px rgba(34,197,94,.4);transition:transform .2s,box-shadow .2s">
+        ✅ QUERO COMEÇAR AGORA →
+      </a>
+
+      <!-- Garantia -->
+      <div style="margin-top:18px;padding:14px 16px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:10px;display:flex;align-items:center;gap:12px">
+        <span style="font-size:32px;flex-shrink:0">🛡️</span>
+        <p style="font-size:13px;color:rgba(239,244,255,.75);line-height:1.5">
+          <strong style="color:#EFF4FF">Garantia de 7 dias:</strong> Se em 7 dias você não sentir qualquer diferença, devolvemos 100% do seu dinheiro. Sem perguntas. Sem burocracia.
+        </p>
+      </div>
+
+      <!-- Trust badges -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:18px">
+        <div style="background:rgba(0,170,255,.05);border:1px solid rgba(0,170,255,.15);border-radius:10px;padding:14px 10px;text-align:center">
+          <p style="font-size:20px;margin-bottom:4px">🔒</p>
+          <p style="font-size:11px;font-weight:600;color:rgba(239,244,255,.8);line-height:1.3">Compra 100% segura</p>
+        </div>
+        <div style="background:rgba(0,170,255,.05);border:1px solid rgba(0,170,255,.15);border-radius:10px;padding:14px 10px;text-align:center">
+          <p style="font-size:20px;margin-bottom:4px">⚡</p>
+          <p style="font-size:11px;font-weight:600;color:rgba(239,244,255,.8);line-height:1.3">Acesso imediato</p>
+        </div>
+        <div style="background:rgba(0,170,255,.05);border:1px solid rgba(0,170,255,.15);border-radius:10px;padding:14px 10px;text-align:center">
+          <p style="font-size:20px;margin-bottom:4px">📱</p>
+          <p style="font-size:11px;font-weight:600;color:rgba(239,244,255,.8);line-height:1.3">Funciona no celular</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEÇÃO 9 — URGÊNCIA ══════════ -->
+<section class="py-16 px-6 md:px-8 bg-error-container/20">
+  <div class="max-w-3xl mx-auto text-center">
+    <span class="material-symbols-outlined text-4xl text-error mb-4" style="font-variation-settings:'FILL' 1;">timer</span>
+    <h3 class="font-headline text-2xl md:text-3xl font-bold text-on-error-container mb-4">
+      🚨 Acesso Promocional Disponível Apenas Para Novos Alunos
+    </h3>
+    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+      Depois que as vagas do lote forem preenchidas, o preço volta para <strong class="text-on-surface">R$ 149</strong>. Aproveite enquanto está em <strong class="text-error">R$ 34,90</strong>.
+    </p>
+    <a href="https://pay.kiwify.com.br/VV2R0JK" target="_blank" class="cta-primary inline-block px-10 py-5 rounded-xl text-lg font-bold shadow-lg">
+      👉 Garantir Minha Vaga Agora
+    </a>
+  </div>
+</section>
+
+<!-- ══════════ SEÇÃO 10 — SEGURANÇA / GARANTIA ══════════ -->
+<section class="py-24 px-6 md:px-8 bg-surface-container-low">
+  <div class="max-w-3xl mx-auto">
+    <div class="guarantee-card p-10 md:p-14 shadow-[0_8px_40px_rgba(0,0,0,0.07)] text-center">
+      <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-8">
+        <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings:'FILL' 1;">verified_user</span>
+      </div>
+      <h2 class="font-headline text-3xl md:text-4xl font-bold text-on-surface mb-6">Garantia Incondicional de 7 Dias</h2>
+      <p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+        Se em 7 dias você não sentir qualquer diferença no seu conforto e mobilidade, devolvemos cada centavo. Sem questionamento, sem burocracia, sem enrolação.
+      </p>
+      <p class="text-on-surface-variant text-lg leading-relaxed mb-10">
+        Estamos tão confiantes no Método Antidor que colocamos o dinheiro em jogo por você. <strong class="text-on-surface">O risco é todo nosso. O benefício é todo seu.</strong>
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="flex flex-col items-center gap-2 p-4 bg-primary/5 rounded-xl">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">lock</span>
+          <p class="text-xs font-semibold text-on-surface text-center">Pagamento Seguro</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4 bg-primary/5 rounded-xl">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">download</span>
+          <p class="text-xs font-semibold text-on-surface text-center">Envio Imediato</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4 bg-primary/5 rounded-xl">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">support_agent</span>
+          <p class="text-xs font-semibold text-on-surface text-center">Suporte Humano</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4 bg-primary/5 rounded-xl">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">replay</span>
+          <p class="text-xs font-semibold text-on-surface text-center">Garantia 7 Dias</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA FINAL ══════════ -->
+<section class="py-32 px-6 md:px-8 bg-on-background text-white relative overflow-hidden grain-overlay">
+  <div class="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-on-background/80 pointer-events-none"></div>
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <h2 class="font-headline text-4xl md:text-6xl font-bold italic leading-tight mb-8 text-white">
+      Desbloqueie Suas Articulações.<br>Reduza Suas Dores.<br>Recupere Sua Liberdade.
+    </h2>
+
+    <p class="text-surface-dim text-xl leading-relaxed max-w-2xl mx-auto mb-12">
+      Não espere a dor piorar. Não espere o corpo travar de vez. Não espere precisar de ajuda para as coisas mais básicas. <strong class="text-white">O momento de agir é agora, enquanto ainda dá tempo.</strong>
+    </p>
+
+    <div class="inline-block bg-white/8 backdrop-blur border border-white/15 p-8 rounded-2xl mb-10 text-left">
+      <div class="flex items-start gap-5">
+        <span class="material-symbols-outlined text-primary-fixed text-4xl flex-shrink-0" style="font-variation-settings:'FILL' 1;">verified_user</span>
+        <div>
+          <p class="text-white font-bold text-lg mb-1">Garantia Incondicional de 7 Dias</p>
+          <p class="text-surface-dim text-sm">Se você não sentir diferença, devolvemos cada centavo. Sem burocracia. Sem perguntas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <a href="https://pay.kiwify.com.br/VV2R0JK" target="_blank" class="cta-glow inline-block bg-tertiary-fixed text-on-tertiary-fixed px-10 md:px-16 py-6 rounded-xl text-xl md:text-2xl font-bold w-full md:w-auto">
+        👉 Quero Começar Agora
+      </a>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-6 text-surface-dim text-sm">
+      <span class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">lock</span>
+        Pagamento Seguro
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">download</span>
+        Acesso Imediato
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">devices</span>
+        Funciona no Celular
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">replay</span>
+        Garantia de 7 Dias
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="bg-surface-container-low py-12 px-6 md:px-8">
+  <div class="max-w-screen-xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+      <div class="font-headline text-xl font-bold italic text-primary">Manual Antidor</div>
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-on-surface-variant">
+        <a href="#" class="hover:text-primary transition-colors">Política de Privacidade</a>
+        <a href="#" class="hover:text-primary transition-colors">Termos de Uso</a>
+        <a href="#" class="hover:text-primary transition-colors">Aviso Legal</a>
+        <a href="#" class="hover:text-primary transition-colors">Suporte</a>
+      </div>
+    </div>
+    <div class="border-t border-outline-variant/30 pt-8">
+      <p class="text-xs text-on-surface-variant text-center leading-relaxed max-w-3xl mx-auto">
+        © 2025 Manual Antidor. Todos os direitos reservados. Este produto é um manual digital informativo e não substitui orientação médica profissional. Consulte seu médico antes de iniciar qualquer rotina de movimento. Os depoimentos apresentados são ilustrativos. Resultados individuais podem variar.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
